@@ -4,8 +4,10 @@
 	<div class="wrapper-main">
 		<div class="wrapper-login">
 			<div class="login-title">Easy Chat</div>
-			Добро пожаловать в простой чат, где вы можете просто пообщаться
-			и разделить общее цифровое пространство
+			<div class="login-description">
+				Добро пожаловать в простой чат, где вы можете просто пообщаться
+				и разделить общее цифровое пространство
+			</div>
 			<div class="devider"></div>
 			<span class="login-btn-title">Войти с помощью</span>
 			<div class="google-btn">Google</div>
@@ -39,6 +41,15 @@
 	font-family: 'Roboto', sans-serif;
 	font-size: 20px;
 	font-weight: 700;
+	width: 100%;
+	text-align: center;
+}
+.login-description {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 100;
+	font-style: italic;
 	width: 100%;
 	text-align: center;
 }
