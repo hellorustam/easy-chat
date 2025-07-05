@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import googleIcon from '../assets/googleIcon.svg'
+</script>
 
 <template>
 	<div class="wrapper-main">
@@ -10,7 +12,11 @@
 			</div>
 			<div class="login-divider"></div>
 			<span class="login-btn-title">Войти с помощью</span>
-			<div class="login-google-btn">Google</div>
+			<button class="login-google-btn">
+				<slot></slot>
+				<img :src="googleIcon" alt="Google Sign In" />
+				<div>Google</div>
+			</button>
 		</div>
 	</div>
 </template>
@@ -71,7 +77,23 @@
 
 .login-google-btn {
 	width: 100%;
-	height: 48px;
-	background-color: #4285f4;
+	padding: 10px 16px;
+	border-radius: 16px;
+	border: none;
+	background-color: #e8eff3;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	text-align: center;
+	cursor: pointer;
+	display: flex;
+	/* justify-content: center; */
+	align-items: center;
+	gap: 10px;
+}
+.login-google-btn:hover {
+	background-color: #d9e1e7;
+}
+.login-google-btn div {
+	width: 100%;
 }
 </style>
