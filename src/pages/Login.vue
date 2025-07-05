@@ -3,7 +3,7 @@
 <template>
 	<div class="wrapper-main">
 		<div class="wrapper-login">
-			<span class="login-title">Easy Chat</span>
+			<div class="login-title">Easy Chat</div>
 			Добро пожаловать в простой чат, где вы можете просто пообщаться
 			и разделить общее цифровое пространство
 			<div class="devider"></div>
@@ -26,9 +26,20 @@
 .wrapper-login {
 	max-width: 320px;
 	background-color: white;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
 	padding: 24px;
 	border-radius: 16px;
 	box-shadow: 0px 4px 0px rgba(231, 231, 231, 1),
 		0px 12px 14px rgba(0, 0, 0, 0.12);
+}
+
+.login-title {
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	font-weight: 700;
+	width: 100%;
+	text-align: center;
 }
 </style>
