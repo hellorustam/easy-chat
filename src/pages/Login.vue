@@ -3,34 +3,23 @@ import googleIcon from '../assets/googleIcon.svg'
 </script>
 
 <template>
-	<div class="wrapper-main">
-		<div class="wrapper-login">
-			<div class="login-title">Easy Chat</div>
-			<div class="login-description">
-				Добро пожаловать в простой чат, где вы можете просто пообщаться
-				и разделить общее цифровое пространство
-			</div>
-			<div class="login-divider"></div>
-			<span class="login-btn-title">Войти с помощью</span>
-			<button class="login-google-btn">
-				<slot></slot>
-				<img :src="googleIcon" alt="Google Sign In" />
-				<div>Google</div>
-			</button>
+	<div class="wrapper-login">
+		<div class="login-title">Easy Chat</div>
+		<div class="login-description">
+			Добро пожаловать в простой чат, где вы можете просто пообщаться
+			и разделить общее цифровое пространство
 		</div>
+		<div class="login-divider"></div>
+		<span class="login-btn-title">Войти с помощью</span>
+		<button class="login-google-btn">
+			<slot></slot>
+			<img :src="googleIcon" alt="Google Sign In" />
+			<div>Google</div>
+		</button>
 	</div>
 </template>
 
 <style>
-.wrapper-main {
-	width: 100%;
-	height: 100vh;
-	background-color: #f1f1f1;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
 .wrapper-login {
 	max-width: 320px;
 	background-color: white;
