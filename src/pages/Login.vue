@@ -8,9 +8,9 @@
 				Добро пожаловать в простой чат, где вы можете просто пообщаться
 				и разделить общее цифровое пространство
 			</div>
-			<div class="devider"></div>
+			<div class="login-divider"></div>
 			<span class="login-btn-title">Войти с помощью</span>
-			<div class="google-btn">Google</div>
+			<div class="login-google-btn">Google</div>
 		</div>
 	</div>
 </template>
@@ -44,6 +44,7 @@
 	width: 100%;
 	text-align: center;
 }
+
 .login-description {
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
@@ -52,5 +53,25 @@
 	font-style: italic;
 	width: 100%;
 	text-align: center;
+}
+
+.login-divider {
+	width: 100%;
+	height: 2px;
+	background-color: #f1f1f1;
+}
+
+.login-btn-title {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 20px;
+	text-align: center;
+}
+
+.login-google-btn {
+	width: 100%;
+	height: 48px;
+	background-color: #4285f4;
 }
 </style>
