@@ -19,8 +19,7 @@ import sendArrow from '../assets/sendArrow.svg'
 <style scoped>
 .wrapper-message {
 	display: flex;
-	width: 100%;
-	max-width: 594px;
+	width: 594px;
 	margin: 0 auto;
 	padding: 12px 12px 12px 28px;
 	background-color: white;
