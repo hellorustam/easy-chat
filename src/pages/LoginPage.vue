@@ -2,6 +2,11 @@
 import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
 import googleIcon from '../assets/googleIcon.svg'
 import router from '../router/router'
+import { useUserStore } from '../store/user.ts'
+
+const { user } = useUserStore()
+
+console.log(user)
 
 const signInWithGoogle = async () => {
 	try {

@@ -4,9 +4,9 @@ import { onMounted, ref } from 'vue'
 import BubbleItem from '../components/BubbleItem.vue'
 import TextField from '../components/TextField.vue'
 import router from '../router/router'
-// import { useUserStore } from '../store/user.ts'
+import { useUserStore } from '../store/user.ts'
 
-// const { user } = useUserStore()
+const { user } = useUserStore()
 
 const isLoggedIn = ref(false)
 
@@ -43,7 +43,7 @@ const handleSignOut = async () => {
 		<BubbleItem />
 		<TextField />
 
-		<!-- <div v-if="user">Добро пожаловать {{ user.displayName }}</div> -->
+		<div v-if="user">Добро пожаловать {{ user.displayName }}</div>
 		<button @click="handleSignOut" v-if="isLoggedIn">Выйти</button>
 	</div>
 </template>
