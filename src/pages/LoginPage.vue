@@ -1,5 +1,18 @@
 <script setup lang="ts">
+import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
 import googleIcon from '../assets/googleIcon.svg'
+import router from '../router/router'
+
+const signInWithGoogle = async () => {
+	try {
+		const provider = new GoogleAuthProvider()
+		await signInWithPopup(getAuth(), provider)
+		router.push('/chat')
+		console.log('User signed in with Google successfully')
+	} catch (error) {
+		console.error('Error signing in with Google:', error)
+	}
+}
 </script>
 
 <template>
@@ -11,10 +24,10 @@ import googleIcon from '../assets/googleIcon.svg'
 		</div>
 		<div class="login-divider"></div>
 		<span class="login-btn-title">Войти с помощью</span>
-		<router-link to="/chat" class="login-google-btn">
+		<button @click="signInWithGoogle" to="/chat" class="login-google-btn">
 			<slot></slot>
 			<img :src="googleIcon" alt="Google Sign In" />
 			<div>Google</div>
-		</router-link>
+		</button>
 	</div>
 </template>

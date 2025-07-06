@@ -1,4 +1,5 @@
 import { initializeApp } from 'firebase/app'
+import { getAuth } from 'firebase/auth'
 import {
 	FIREBASE_API_URL,
 	FIREBASE_APP_ID,
@@ -18,3 +19,6 @@ const firebaseConfig = {
 }
 
 const app = initializeApp(firebaseConfig)
+const auth = getAuth(app)
+
+export default auth
