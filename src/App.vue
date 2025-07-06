@@ -1,12 +1,8 @@
-<script setup lang="ts">
-import TextField from './components/TextField.vue'
-import Login from './pages/Login.vue'
-</script>
+<script setup lang="ts"></script>
 
 <template>
 	<div class="wrapper-main">
-		<Login />
-		<TextField />
+		<router-view />
 	</div>
 </template>
 

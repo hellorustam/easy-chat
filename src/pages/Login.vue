@@ -11,11 +11,11 @@ import googleIcon from '../assets/googleIcon.svg'
 		</div>
 		<div class="login-divider"></div>
 		<span class="login-btn-title">Войти с помощью</span>
-		<button class="login-google-btn">
+		<router-link to="/chat" class="login-google-btn">
 			<slot></slot>
 			<img :src="googleIcon" alt="Google Sign In" />
 			<div>Google</div>
-		</button>
+		</router-link>
 	</div>
 </template>
 
@@ -65,7 +65,6 @@ import googleIcon from '../assets/googleIcon.svg'
 }
 
 .login-google-btn {
-	width: 100%;
 	padding: 10px 16px;
 	border-radius: 16px;
 	border: none;
@@ -73,9 +72,10 @@ import googleIcon from '../assets/googleIcon.svg'
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	text-align: center;
+	text-decoration: none;
+	color: #000000;
 	cursor: pointer;
 	display: flex;
-	/* justify-content: center; */
 	align-items: center;
 	gap: 10px;
 }
