@@ -1,6 +1,6 @@
 @use 'normalize.scss';
-@use 'app.scss';
-@use 'bubble.scss';
-@use 'login.scss';
-@use 'chat.scss';
-@use 'text-field.scss';
+@use './_pages/app.scss';
+@use './_pages/login.scss';
+@use './_pages/chat.scss';
+@use './_components/bubble.scss';
+@use './_components/text-field.scss';
