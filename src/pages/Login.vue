@@ -3,7 +3,7 @@ import googleIcon from '../assets/googleIcon.svg'
 </script>
 
 <template>
-	<div class="wrapper-login">
+	<div class="login-wrapper">
 		<div class="login-title">Easy Chat</div>
 		<div class="login-description">
 			Добро пожаловать в простой чат, где вы можете просто пообщаться
