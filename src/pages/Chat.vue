@@ -4,7 +4,7 @@ import TextField from '../components/TextField.vue'
 </script>
 
 <template>
-	<div class="wrapper">
+	<div class="wrapper-chat">
 		<Bubble />
 		<TextField />
 	</div>
