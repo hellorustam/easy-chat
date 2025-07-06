@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import Bubble from '../components/Bubble.vue'
+import BubbleItem from '../components/BubbleItem.vue'
 import TextField from '../components/TextField.vue'
 </script>
 
 <template>
 	<div class="wrapper-chat">
-		<Bubble />
+		<BubbleItem />
 		<TextField />
 	</div>
 </template>
