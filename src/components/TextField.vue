@@ -3,15 +3,17 @@ import sendArrow from '../assets/sendArrow.svg'
 </script>
 
 <template>
-	<div class="wrapper-message">
+	<div class="text-field-wrapper">
 		<input
 			type="text"
 			placeholder="Введите сообщение…"
-			class="input"
+			class="text-field-input"
 			maxlength="80"
 		/>
 		<router-link to="/">
-			<button class="send-button"><img :src="sendArrow" alt="" /></button>
+			<button class="text-field-send-button">
+				<img :src="sendArrow" alt="" />
+			</button>
 		</router-link>
 	</div>
 </template>
