@@ -36,10 +36,11 @@ function showProfile() {
 				<p class="profile-email" v-if="user">{{ user.email }}</p>
 			</div>
 			<img
+				v-if="user"
 				class="profile-avatar"
 				:src="user?.photoURL || undefined"
+				referrerpolicy="no-referrer"
 				:alt="user?.displayName || 'User Avatar'"
-				v-if="user"
 			/>
 		</div>
 		<button class="profile-sign-out-button" @click="handleSignOut" v-if="user">
