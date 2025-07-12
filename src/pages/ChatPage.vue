@@ -2,11 +2,9 @@
 import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth'
 import { onMounted, ref } from 'vue'
 import BubbleItem from '../components/BubbleItem.vue'
+import Profile from '../components/Profile.vue'
 import TextField from '../components/TextField.vue'
 import router from '../router/router'
-import { useUserStore } from '../store/user.ts'
-
-const { user } = useUserStore()
 
 const isLoggedIn = ref(false)
 
@@ -40,8 +38,7 @@ const handleSignOut = async () => {
 
 <template>
 	<div class="chat-wrapper">
-		<div v-if="user">Добро пожаловать {{ user.displayName }}</div>
-		<button @click="handleSignOut" v-if="isLoggedIn">Выйти</button>
+		<Profile v-if="isLoggedIn" />
 		<BubbleItem />
 		<TextField />
 	</div>
