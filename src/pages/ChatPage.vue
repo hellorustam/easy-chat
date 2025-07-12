@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth'
+import { getAuth, onAuthStateChanged } from 'firebase/auth'
 import { onMounted, ref } from 'vue'
 import BubbleItem from '../components/BubbleItem.vue'
 import Profile from '../components/Profile.vue'
@@ -23,17 +23,6 @@ onMounted(() => {
 		}
 	})
 })
-
-const handleSignOut = async () => {
-	const auth = getAuth()
-	try {
-		await signOut(auth)
-		console.log('User signed out successfully')
-		router.push('/')
-	} catch (error) {
-		console.error('Error signing out:', error)
-	}
-}
 </script>
 
 <template>

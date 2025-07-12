@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { getAuth, signOut } from 'firebase/auth'
+import { storeToRefs } from 'pinia'
 import logOutIcon from '../assets/logout.svg'
 import router from '../router/router'
 import { useUserStore } from '../store/user.ts'
 
-// const isLoggedIn = ref(false)
-
-const { user } = useUserStore()
+const userStore = useUserStore()
+const { user } = storeToRefs(userStore)
 
 const handleSignOut = async () => {
 	const auth = getAuth()
@@ -25,8 +25,8 @@ const handleSignOut = async () => {
 		<div class="profile-data">
 			<div class="profile-avatar">
 				<img
-					:src="user.photoURL !== null ? user.photoURL : undefined"
-					:alt="user.displayName !== null ? user.displayName : undefined"
+					:src="user?.photoURL || undefined"
+					:alt="user?.displayName || 'User Avatar'"
 					v-if="user"
 				/>
 			</div>
