@@ -10,10 +10,8 @@ import sendArrow from '../assets/sendArrow.svg'
 			class="text-field-input"
 			maxlength="80"
 		/>
-		<router-link to="/">
-			<button class="text-field-send-button">
-				<img :src="sendArrow" alt="" />
-			</button>
-		</router-link>
+		<button class="text-field-send-button">
+			<img :src="sendArrow" alt="" />
+		</button>
 	</div>
 </template>
