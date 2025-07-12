@@ -39,11 +39,10 @@ const handleSignOut = async () => {
 </script>
 
 <template>
-	<div class="wrapper-chat">
-		<BubbleItem />
-		<TextField />
-
+	<div class="chat-wrapper">
 		<div v-if="user">Добро пожаловать {{ user.displayName }}</div>
 		<button @click="handleSignOut" v-if="isLoggedIn">Выйти</button>
+		<BubbleItem />
+		<TextField />
 	</div>
 </template>
