@@ -29,12 +29,17 @@
 		background-color: #d9d9d9;
 		border-radius: 50%;
 		object-fit: cover;
+		border: 4px solid #dde6f8;
 	}
 	&-avatar-btn {
 		position: absolute;
 		top: 32px;
 		right: 32px;
 		cursor: pointer;
+
+		&:hover {
+			border: 4px solid #fbcfd2;
+		}
 	}
 
 	&-info {
