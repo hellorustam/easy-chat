@@ -14,6 +14,7 @@ const handleSignOut = async () => {
 	try {
 		await signOut(auth)
 		console.log('User signed out successfully')
+		userStore.clearUser()
 		router.push('/')
 	} catch (error) {
 		console.error('Error signing out:', error)

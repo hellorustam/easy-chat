@@ -8,24 +8,26 @@ import { useUserStore } from './store/user.ts'
 import { APP_TITLE } from './utils/meta.ts'
 
 document.title = APP_TITLE
-// auth
-
-// ---
 
 const app = createApp(App)
 const pinia = createPinia()
 
-app.use(router)
 app.use(pinia)
-// app.mount('#app')
+app.use(router)
+
+let appIsMounted = false
 
 onAuthStateChanged(auth, firebaseUser => {
 	const userStore = useUserStore()
+
 	if (firebaseUser) {
 		userStore.setUser(firebaseUser)
 	} else {
 		userStore.clearUser()
 	}
 
-	app.mount('#app') // ⚠️ Только после получения user
+	if (!appIsMounted) {
+		app.mount('#app')
+		appIsMounted = true
+	}
 })

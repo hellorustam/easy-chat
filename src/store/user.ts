@@ -12,12 +12,16 @@ interface User {
 export const useUserStore = defineStore('user', () => {
 	const user = ref<User | null>(null)
 
-	const setUser = (firebaseUser: FirebaseUser) => {
-		user.value = {
-			uid: firebaseUser.uid,
-			email: firebaseUser.email,
-			displayName: firebaseUser.displayName,
-			photoURL: firebaseUser.photoURL,
+	const setUser = async (firebaseUser: FirebaseUser) => {
+		try {
+			user.value = {
+				uid: firebaseUser.uid,
+				email: firebaseUser.email,
+				displayName: firebaseUser.displayName,
+				photoURL: firebaseUser.photoURL,
+			}
+		} catch (error) {
+			console.log('Error setting user:', error)
 		}
 	}
 

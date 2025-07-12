@@ -1,33 +1,12 @@
 <script setup lang="ts">
-import { getAuth, onAuthStateChanged } from 'firebase/auth'
-import { onMounted, ref } from 'vue'
 import BubbleItem from '../components/BubbleItem.vue'
 import Profile from '../components/Profile.vue'
 import TextField from '../components/TextField.vue'
-import router from '../router/router'
-
-const isLoggedIn = ref(false)
-
-let auth
-
-onMounted(() => {
-	auth = getAuth()
-	onAuthStateChanged(auth, user => {
-		if (user) {
-			isLoggedIn.value = true
-			console.log('User is logged in:', user.displayName)
-		} else {
-			isLoggedIn.value = false
-			console.log('User is not logged in')
-			router.push('/')
-		}
-	})
-})
 </script>
 
 <template>
 	<div class="chat-wrapper">
-		<Profile v-if="isLoggedIn" />
+		<Profile />
 		<BubbleItem />
 		<TextField />
 	</div>
